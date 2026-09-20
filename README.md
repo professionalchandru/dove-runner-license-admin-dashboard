@@ -2,6 +2,8 @@
 
 Internal dashboard for browsing customer licenses and updating seats allowed. Built as a Next.js App Router take-home with TypeScript strict mode, TanStack Query, and a small shadcn set.
 
+**Live demo:** [dove-runner-license-admin-dashboard.vercel.app/licenses](https://dove-runner-license-admin-dashboard.vercel.app/licenses)
+
 ## Setup
 
 ```bash
