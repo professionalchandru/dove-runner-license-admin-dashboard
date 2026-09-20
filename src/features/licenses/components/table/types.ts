@@ -6,17 +6,6 @@ import type {
   StatusFilter,
 } from "../../model";
 
-export type LicenseEmptyKind = "source" | "filters";
-
-export type LicenseEmptyCopy = {
-  title: string;
-  description: string;
-};
-
-export type LicenseEmptyProps = {
-  kind: LicenseEmptyKind;
-};
-
 export type LicenseErrorProps = {
   message: string;
   onRetry: () => void;
@@ -81,12 +70,6 @@ export type LicensePaginationProps = {
   rangeStart: number;
   rangeEnd: number;
   onPageChange: (page: number) => void;
-};
-
-export type LicensePaginationSummaryProps = {
-  total: number;
-  rangeStart: number;
-  rangeEnd: number;
 };
 
 export type LicensePaginationNavProps = {

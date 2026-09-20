@@ -54,7 +54,3 @@ export type EditSeatsActionsProps = {
   isSaving: boolean;
   onCancel: () => void;
 };
-
-export type EditSeatsMessageProps = {
-  message: string | null;
-};

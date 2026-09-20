@@ -1,5 +1,5 @@
+import { formatPaginationSummary } from "../../utils";
 import { LicensePaginationNav } from "./license-pagination-nav";
-import { LicensePaginationSummary } from "./license-pagination-summary";
 import type { LicensePaginationProps } from "./types";
 
 export function LicensePagination({
@@ -12,11 +12,9 @@ export function LicensePagination({
 }: LicensePaginationProps) {
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-      <LicensePaginationSummary
-        total={total}
-        rangeStart={rangeStart}
-        rangeEnd={rangeEnd}
-      />
+      <p className="text-sm text-muted-foreground">
+        {formatPaginationSummary(total, rangeStart, rangeEnd)}
+      </p>
       {pageCount > 1 ? (
         <LicensePaginationNav
           page={page}

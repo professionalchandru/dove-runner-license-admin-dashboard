@@ -2,7 +2,6 @@
 
 import { useEditSeatsForm } from "../../hooks";
 import { EditSeatsActions } from "./edit-seats-actions";
-import { EditSeatsMessage } from "./edit-seats-message";
 import { EditSeatsStepper } from "./edit-seats-stepper";
 import type { EditSeatsFormProps } from "./types";
 
@@ -34,7 +33,11 @@ export function EditSeatsForm({
         onValueChange={updateValue}
         onCancel={onCancel}
       />
-      <EditSeatsMessage message={message} />
+      {message ? (
+        <p className="rounded-md bg-amber-100 px-2 py-1.5 text-xs text-amber-950 dark:bg-amber-900/40 dark:text-amber-100">
+          {message}
+        </p>
+      ) : null}
       <EditSeatsActions isSaving={isSaving} onCancel={onCancel} />
     </form>
   );

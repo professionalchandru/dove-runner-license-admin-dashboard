@@ -1,7 +1,6 @@
 export type {
   EditSeatsActionsProps,
   EditSeatsFormProps,
-  EditSeatsMessageProps,
   EditSeatsStepperProps,
   LicensePanelBodyProps,
   LicensePanelDetailProps,

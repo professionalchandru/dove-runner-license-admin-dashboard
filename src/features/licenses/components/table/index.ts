@@ -1,12 +1,9 @@
 export type {
-  LicenseEmptyKind,
-  LicenseEmptyProps,
   LicenseErrorProps,
   LicensePaginationNavProps,
   LicensePaginationProps,
-  LicensePaginationSummaryProps,
-  LicenseSortIconProps,
   LicenseTableColumn,
+  LicenseSortIconProps,
   LicenseTableHeaderProps,
   LicenseTablePadRowsProps,
   LicenseTableProps,
@@ -16,7 +13,6 @@ export type {
   LicenseToolbarSearchProps,
 } from "./types";
 
-export { LicenseEmpty } from "./license-empty";
 export { LicenseError } from "./license-error";
 export { LicenseLoading } from "./license-loading";
 export { LicensePagination } from "./license-pagination";

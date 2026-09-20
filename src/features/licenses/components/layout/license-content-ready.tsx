@@ -1,11 +1,4 @@
-import {
-  LicenseEmpty,
-  LicenseError,
-  LicenseLoading,
-  LicensePagination,
-  LicenseTable,
-  LicenseToolbar,
-} from "../table";
+import { LicensePagination, LicenseTable, LicenseToolbar } from "../table";
 import type { LicenseContentReadyProps } from "./types";
 
 export function LicenseContentReady({
@@ -13,6 +6,19 @@ export function LicenseContentReady({
   filters,
   view,
 }: LicenseContentReadyProps) {
+  const empty =
+    licenses.length === 0
+      ? {
+          title: "No licenses",
+          description: "There are no license records to show yet.",
+        }
+      : view.total === 0
+        ? {
+            title: "No licenses match",
+            description: "Try a different name, status, or plan.",
+          }
+        : null;
+
   return (
     <>
       <div className="border-b px-4 py-3">
@@ -25,10 +31,13 @@ export function LicenseContentReady({
           onPlanChange={filters.setPlan}
         />
       </div>
-      {licenses.length === 0 ? (
-        <LicenseEmpty kind="source" />
-      ) : view.total === 0 ? (
-        <LicenseEmpty kind="filters" />
+      {empty ? (
+        <div className="px-6 py-12 text-center">
+          <p className="text-sm font-medium">{empty.title}</p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {empty.description}
+          </p>
+        </div>
       ) : (
         <LicenseTable
           rows={view.rows}
