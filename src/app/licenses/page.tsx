@@ -1,4 +1,4 @@
-import { LicensesPage } from "@/features/licenses";
+import { LicensesPage } from "@/features/licenses/licenses-page";
 import type { LicensesRouteProps } from ".";
 import { readFailParam } from "./read-fail-param";
 
