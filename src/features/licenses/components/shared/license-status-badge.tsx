@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui";
-import { LICENSE_STATUS_CLASS } from "./status-styles";
+import { LICENSE_STATUS_CLASS } from "./constant";
 import type { LicenseStatusBadgeProps } from "./types";
 
 export function LicenseStatusBadge({ status }: LicenseStatusBadgeProps) {

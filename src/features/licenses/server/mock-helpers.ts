@@ -1,8 +1,6 @@
 import type { LicenseStatus } from "../model";
+import { MOCK_TODAY } from "./constant";
 import type { MockDateParts } from "./types";
-
-/** Fixed "today" so status and renewalDate stay consistent in mock data. */
-export const MOCK_TODAY: MockDateParts = { year: 2026, month: 9, day: 20 };
 
 export function pad(n: number): string {
   return n.toString().padStart(2, "0");

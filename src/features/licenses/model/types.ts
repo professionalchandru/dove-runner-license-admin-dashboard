@@ -1,21 +1,7 @@
-export const PLANS = ["Trial", "Standard", "Enterprise"] as const;
+import { LICENSE_STATUSES, PLANS, SORT_KEYS } from "./constant";
+
 export type Plan = (typeof PLANS)[number];
-
-export const LICENSE_STATUSES = [
-  "Active",
-  "Expiring Soon",
-  "Expired",
-  "Suspended",
-] as const;
 export type LicenseStatus = (typeof LICENSE_STATUSES)[number];
-
-export const SORT_KEYS = [
-  "customerName",
-  "plan",
-  "status",
-  "seats",
-  "renewalDate",
-] as const;
 export type SortKey = (typeof SORT_KEYS)[number];
 export type SortDirection = "asc" | "desc";
 

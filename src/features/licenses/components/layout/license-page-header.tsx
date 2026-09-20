@@ -1,8 +1,5 @@
 import type { LicensePageHeaderProps } from "./types";
-
-const DEFAULT_TITLE = "License Usage";
-const DEFAULT_DESCRIPTION =
-  "Internal admin for customer license records. Open a row to review the account and update seats allowed.";
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE } from "./constant";
 
 export function LicensePageHeader({
   title = DEFAULT_TITLE,

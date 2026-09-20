@@ -1,14 +1,7 @@
 import { formatStatValue } from "../../utils";
 import { LicenseStat } from "../shared";
-import type { LicenseStatCard, LicenseStatsSectionProps } from "./types";
-
-const LICENSE_STAT_CARDS: readonly LicenseStatCard[] = [
-  { key: "total", label: "Licenses", detail: "Customer records" },
-  { key: "active", label: "Active", detail: "Currently in use" },
-  { key: "expiring", label: "Expiring soon", detail: "Renewals to watch" },
-  { key: "suspended", label: "Suspended", detail: "Accounts on hold" },
-  { key: "expired", label: "Expired", detail: "Past renewal" },
-];
+import { LICENSE_STAT_CARDS } from "./constant";
+import type { LicenseStatsSectionProps } from "./types";
 
 export function LicenseStatsSection({ stats }: LicenseStatsSectionProps) {
   return (

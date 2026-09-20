@@ -1,6 +1,7 @@
 "use client";
 
 import { selectTableView, summarizeLicenses } from "../model";
+import { SEARCH_DEBOUNCE_MS } from "./constant";
 import { useDebouncedValue } from "./use-debounced-value";
 import { useIsClient } from "./use-is-client";
 import { useLicenses, useUpdateSeats } from "./use-licenses-api";
@@ -12,7 +13,7 @@ export function useLicensesPage(fail = false): UseLicensesPageResult {
   const licensesQuery = useLicenses(fail, isClient);
   const filters = useTableFilters();
   const updateSeats = useUpdateSeats();
-  const debouncedSearch = useDebouncedValue(filters.search, 300);
+  const debouncedSearch = useDebouncedValue(filters.search, SEARCH_DEBOUNCE_MS);
   const showLoading = !isClient || licensesQuery.isPending;
   const selectedLicense =
     licensesQuery.data?.find((license) => license.id === filters.selectedId) ??

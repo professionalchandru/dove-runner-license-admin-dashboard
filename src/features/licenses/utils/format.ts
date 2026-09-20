@@ -1,19 +1,5 @@
 import type { LicenseStats } from "../model";
-
-const MONTHS = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-] as const;
+import { MONTHS } from "./constant";
 
 export function formatIsoDate(isoDate: string): string {
   const [year, month, day] = isoDate.split("-");

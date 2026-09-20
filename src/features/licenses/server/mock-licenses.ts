@@ -1,71 +1,10 @@
-import type { License, LicenseStatus, Plan } from "../model";
+import { LICENSE_STATUSES, PLANS, type License } from "../model";
+import { CUSTOMERS } from "./constant";
 import {
   emailFor,
   pad,
   renewalDateFor,
 } from "./mock-helpers";
-
-const CUSTOMERS: readonly string[] = [
-  "Acme Corp",
-  "Acme Labs",
-  "Northwind Ltd",
-  "Northwind Retail",
-  "Contoso",
-  "Contoso Health",
-  "Globex",
-  "Initech",
-  "Umbrella Systems",
-  "Stark Analytics",
-  "Wayne Logistics",
-  "Hooli Cloud",
-  "Pied Piper",
-  "Massive Dynamic",
-  "Soylent Foods",
-  "Cyberdyne",
-  "Oscorp",
-  "Wonka Confectionery",
-  "Duff Brewing",
-  "Vandelay Industries",
-  "Prestige Worldwide",
-  "Inversource",
-  "Blue Ocean Media",
-  "Cedar & Pine",
-  "Harbor Freight Co",
-  "Lumen Finance",
-  "Nimbus Travel",
-  "Oak & Iron",
-  "Quiet Harbor",
-  "Redwood Clinics",
-  "Silverline HR",
-  "Tidepool Education",
-  "Vertex Legal",
-  "Willow Parks",
-  "Amber Grid",
-  "Brightside Insurance",
-  "Copperfield Books",
-  "Driftwood Hotels",
-  "Ember Robotics",
-  "Fieldnote Agriculture",
-  "Granite Civic",
-  "Horizon Biotech",
-  "Ivory Coast Coffee",
-  "Juniper Networks Demo",
-  "Keystone Museums",
-  "Larkspur Audio",
-  "Maplewood Schools",
-  "Nightingale Care",
-  "Orchard Payments",
-  "Prairie Energy",
-];
-
-const STATUSES: readonly LicenseStatus[] = [
-  "Active",
-  "Expiring Soon",
-  "Expired",
-  "Suspended",
-];
-
-const PLANS: readonly Plan[] = ["Trial", "Standard", "Enterprise"];
 
 function buildMockLicenses(): License[] {
   if (CUSTOMERS.length !== 50) {
@@ -74,7 +13,7 @@ function buildMockLicenses(): License[] {
 
   return CUSTOMERS.map((customerName, index) => {
     const plan = PLANS[index % PLANS.length];
-    const status = STATUSES[index % STATUSES.length];
+    const status = LICENSE_STATUSES[index % LICENSE_STATUSES.length];
     if (!plan || !status) {
       throw new Error("Plan and status must always resolve.");
     }

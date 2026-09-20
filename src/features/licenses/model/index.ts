@@ -1,29 +1,32 @@
 export {
   LICENSE_STATUSES,
+  MAX_SEATS_ALLOWED,
+  PAGE_SIZE,
   PLANS,
   SORT_KEYS,
-  type ApiErrorResponse,
-  type License,
-  type LicenseStats,
-  type LicenseStatus,
-  type LicensesResponse,
-  type PaginationItem,
-  type Plan,
-  type PlanFilter,
-  type SeatsValidationResult,
-  type SortDirection,
-  type SortKey,
-  type StatusFilter,
-  type TableFilters,
-  type TableView,
-  type UpdateSeatsInput,
+} from "./constant";
+export type {
+  ApiErrorResponse,
+  License,
+  LicenseStats,
+  LicenseStatus,
+  LicensesResponse,
+  PaginationItem,
+  Plan,
+  PlanFilter,
+  SeatsValidationResult,
+  SortDirection,
+  SortKey,
+  StatusFilter,
+  TableFilters,
+  TableView,
+  UpdateSeatsInput,
 } from "./types";
 
 export {
-  PAGE_SIZE,
   paginationItems,
   selectTableView,
   summarizeLicenses,
 } from "./view";
-export { MAX_SEATS_ALLOWED, validateSeatsAllowed } from "./validation";
+export { validateSeatsAllowed } from "./validation";
 export { testLicense } from "./test-license";

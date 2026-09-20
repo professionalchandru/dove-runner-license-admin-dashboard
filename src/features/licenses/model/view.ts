@@ -7,8 +7,6 @@ import type {
 } from "./types";
 import { compareLicenseRows } from "../utils/compare";
 
-export const PAGE_SIZE = 10;
-
 export function summarizeLicenses(licenses: License[]): LicenseStats {
   return {
     total: licenses.length,

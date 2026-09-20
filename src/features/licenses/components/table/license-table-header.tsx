@@ -1,5 +1,5 @@
 import { TableHead, TableHeader, TableRow } from "@/components/ui";
-import { LICENSE_TABLE_COLUMNS } from "./columns";
+import { LICENSE_TABLE_COLUMNS } from "./constant";
 import { LicenseSortIcon } from "./license-sort-icon";
 import type { LicenseTableHeaderProps } from "./types";
 

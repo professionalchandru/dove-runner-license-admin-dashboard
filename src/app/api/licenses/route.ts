@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 import type { ApiErrorResponse, LicensesResponse } from "@/features/licenses/model";
 import { listLicenses } from "@/features/licenses/server";
-
-const DELAY_MS = 400;
+import { DELAY_MS } from "./constant";
 
 export async function GET(request: Request): Promise<
   NextResponse<LicensesResponse | ApiErrorResponse>

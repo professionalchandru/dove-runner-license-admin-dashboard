@@ -1,7 +1,5 @@
+import { MAX_SEATS_ALLOWED } from "./constant";
 import type { SeatsValidationResult } from "./types";
-
-
-export const MAX_SEATS_ALLOWED = 9999;
 
 export function validateSeatsAllowed(
   input: string,

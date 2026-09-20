@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui";
-import { LICENSE_TABLE_COLUMNS } from "./columns";
+import { LICENSE_TABLE_COLUMNS } from "./constant";
 
 export function LicenseLoading() {
   return (
